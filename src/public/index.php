@@ -47,13 +47,13 @@ switch ($uri) {
             [
                 'ok'        => true,
                 'service'   => 'php-native-api',
-                'endpoints' => ['/api/hello']
+                'endpoints' => ['/prueba']
             ],
             JSON_UNESCAPED_UNICODE
         );
         break;
 
-    case '/api/hello':
+    case '/prueba':
         echo json_encode(
             ['message' => 'Hola desde la nueva estructura 👋'],
             JSON_UNESCAPED_UNICODE

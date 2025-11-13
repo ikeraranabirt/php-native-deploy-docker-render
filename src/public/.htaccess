@@ -1,12 +1,10 @@
 RewriteEngine On
 
-# # (RewriteBase es opcional, pero ayuda en subcarpetas)
-RewriteBase /php-native-deploy-docker-render/
+# IMPORTANTE: ajusta esto al path real de tu proyecto en XAMPP
+# Si tu proyecto está en: C:\xampp\htdocs\php-native-deploy-docker-render
+# y entras así: http://localhost/php-native-deploy-docker-render/src/public/
+RewriteBase /php-native-deploy-docker-render/src/public/
 
-# # Si existe archivo o carpeta, NO redirigir
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# Si no existe, enviar a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
