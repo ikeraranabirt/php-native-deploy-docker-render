@@ -1,3 +1,5 @@
+
+
 # Imagen oficial de PHP CLI (con servidor embebido)
 FROM php:8.3-cli
 
@@ -12,3 +14,4 @@ COPY . /app
 # - Usa el puerto $PORT si existe (Render lo pone); si no, 8080 por defecto
 # - Usa router.php para reenviar las rutas a index.php
 CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-8080} -t /app /app/router.php"]
+
