@@ -5,7 +5,6 @@ use App\Core\Router;
 
 header('Content-Type: application/json; charset=utf-8');
 
-// AUTOCARGA MANUAL: NO USA COMPOSER
 spl_autoload_register(function (string $class): void {
     $prefix  = 'App\\';
     $baseDir = dirname(__DIR__) . '/app/'; // src/app/
@@ -35,7 +34,7 @@ if ($scriptDir !== '' && $scriptDir !== '/' && strpos($uri, $scriptDir) === 0) {
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-// Cargar rutas desde config/routes.php
+// Cargar rutas desde config/routes.php (src/config/routes.php)
 $routes = require dirname(__DIR__) . '/config/routes.php';
 
 // Despachar con el Router

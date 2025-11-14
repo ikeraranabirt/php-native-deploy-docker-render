@@ -21,7 +21,7 @@ final class HelloController extends BaseController
     public function hello(): void
     {
         $this->json([
-            'message' => 'Hola desde la API estructurada 👋',
+            'message' => 'Kaixo desde el endpoint /pruebas 👋',
         ]);
     }
 }
