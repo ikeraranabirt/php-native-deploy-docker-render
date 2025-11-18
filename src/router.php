@@ -1,7 +1,7 @@
 <?php
 // Router para el servidor embebido de PHP (Docker / Render)
 
-$publicPath = __DIR__ . '/src/public';
+$publicPath = __DIR__ . '/public';
 
 // Path solicitado
 $requested = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
