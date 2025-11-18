@@ -7,7 +7,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 spl_autoload_register(function (string $class): void {
     $prefix  = 'App\\';
-    $baseDir = dirname(__DIR__) . '/app/'; // src/app/
+    $baseDir = dirname(__DIR__) . '/app/';
 
     if (strncmp($prefix, $class, strlen($prefix)) !== 0) {
         return;
